@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Данные бланка" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:RadacodeTestForms" x:Class="RadacodeTestForms.BlancDataPageView">		
+	<ContentPage.Content>
+		<StackLayout Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="15" Orientation="Vertical">
+			<Label Text="{Binding FirstName, StringFormat='Имя: {0:N}'}" /> 
+			<Label Text="{Binding LastName, StringFormat='Фамилия: {0:N}'}" /> 
+			<Label Text="{Binding Country, StringFormat='Страна: {0:N}'}" /> 
+			<Label Text="{Binding City, StringFormat='Город: {0:N}'}" /> 
+			<Label Text="{Binding Univ, StringFormat='ВУЗ: {0:N}'}" /> 
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

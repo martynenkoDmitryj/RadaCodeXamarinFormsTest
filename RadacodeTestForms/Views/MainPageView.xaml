@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage Title="Бланк" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:RadacodeTestForms" x:Class="RadacodeTestForms.MainPageView">
+	<ContentPage.Padding>
+	<OnPlatform x:TypeArguments="Thickness"
+				iOS = "10,10,10,0"
+				Android = "10,5,10,0" />
+	</ContentPage.Padding>
+
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="10" Orientation="Vertical">
+			<Entry Keyboard="Email" IsEnabled="{Binding IsFirstNameEnabled, Mode=TwoWay}" Text="{Binding FirstName, Mode=TwoWay}" Placeholder= "Имя"  />
+			<Entry Keyboard="Email" IsEnabled="{Binding IsLastNameEnabled, Mode=TwoWay}" Text="{Binding LastName, Mode=TwoWay}" Placeholder = "Фамилия" />
+			<local:DropDownEntryView IsToFind="false" IsEnabled="{Binding IsCountryEnabled, Mode=TwoWay}" Text="{Binding Country, Mode=TwoWay}" ItemsSource="{Binding CountrySource, Mode=TwoWay}" Placeholder="Название страны"/>
+			<local:DropDownEntryView IsToFind="true" IsEnabled="{Binding IsCityEnabled, Mode=TwoWay}" Text="{Binding City, Mode=TwoWay}" ItemsSource="{Binding CitySource, Mode=TwoWay}" Placeholder="Название города" />
+			<local:DropDownEntryView IsToFind="true" IsEnabled="{Binding IsUnivEnabled, Mode=TwoWay}" Text="{Binding Univ, Mode=TwoWay}" ItemsSource="{Binding UnivSource, Mode=TwoWay}"  Placeholder="Название университета"/>
+			<Button Text="Заполнить бланк" Command="{Binding Fill}" HorizontalOptions="Center" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

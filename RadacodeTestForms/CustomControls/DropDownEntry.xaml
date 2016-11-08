@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView  xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RadacodeTestForms.DropDownEntryView" >
+	<ContentView.Content>
+		<StackLayout Orientation="Vertical" >
+			<Entry Keyboard="Email" x:Name="TextBox" TextChanged="Handle_TextChanged" Unfocused="Handle_UnFocused" />
+			<Frame x:Name="Frame" IsVisible="false" Opacity="0" OutlineColor="Gray">
+				<ListView  x:Name="ListView"/>
+			</Frame>
+		</StackLayout>
+	</ContentView.Content>
+</ContentView>
